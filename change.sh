@@ -23,6 +23,7 @@ do
   then   
     echo "we got jenkins";
     cd ~
+    sudo rm -rf jenkins
     sudo  git clone https://github.com/iamdaaniyaal/jenkins.git
     sudo chmod 777 jenkins
     cd jenkins
@@ -35,6 +36,7 @@ do
   elif [[ ${array[i]} =  "sonarqube" ]];
   then
     cd ~  
+    sudo rm -rf sonarqube
     sudo git clone https://github.com/iamdaaniyaal/sonarqube.git
     sudo chmod 777 sonarqube
     cd sonarqube
@@ -47,6 +49,7 @@ do
   then
     echo "we got harbor";
     cd ~
+    sudo rm -rf harbor
     sudo  git clone https://github.com/iamdaaniyaal/harbor.git
     sudo chmod 777 harbor
     cd harbor   
@@ -59,6 +62,7 @@ do
   then
     echo "maven is here";
     cd ~
+    sudo rm -rf maven
     sudo git clone https://github.com/iamdaaniyaal/maven.git
     sudo chmod 777 maven
     cd maven
