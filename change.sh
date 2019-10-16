@@ -14,7 +14,7 @@ done
 
 arraylength=${#array[@]}
 
-for(( i=0; i<${arraylength}; i++));
+for(( i=0; i<${arraylength}; i++))
 
 do
   echo ${array[i]}
