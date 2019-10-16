@@ -8,7 +8,7 @@ echo $time
 
 for i in $(echo $another | sed "s/,/ /g")
 do
-  array+=( $i )
+  array+=($i)
 done
 
 arraylength=${#array[@]}
