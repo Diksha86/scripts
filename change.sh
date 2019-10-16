@@ -26,6 +26,7 @@ do
     sudo  git clone https://github.com/iamdaaniyaal/jenkins.git
     sudo chmod 777 jenkins
     cd jenkins
+    cp /home/sanem_ashokgoud/jenkins/test/lamp/credentials.json .
     sudo sed -i 's/tvalues/'$t1'/' terraform.tfvars
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
@@ -37,6 +38,7 @@ do
     sudo git clone https://github.com/iamdaaniyaal/sonarqube.git
     sudo chmod 777 sonarqube
     cd sonarqube
+    cp /home/sanem_ashokgoud/jenkins/test/lamp/credentials.json .
     sudo sed -i 's/tvalues/'$t1'/' terraform.tfvars
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
@@ -47,7 +49,8 @@ do
     cd ~
     sudo  git clone https://github.com/iamdaaniyaal/harbor.git
     sudo chmod 777 harbor
-    cd harbor    
+    cd harbor   
+    cp /home/sanem_ashokgoud/jenkins/test/lamp/credentials.json .
     sudo sed -i 's/tvalues/'$t1'/' terraform.tfvars
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
@@ -59,6 +62,7 @@ do
     sudo git clone https://github.com/iamdaaniyaal/maven.git
     sudo chmod 777 maven
     cd maven
+    cp /home/sanem_ashokgoud/jenkins/test/lamp/credentials.json .
     sudo sed -i 's/tvalues/'$t1'/' terraform.tfvars
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
