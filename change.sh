@@ -32,7 +32,9 @@ do
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
     sudo sed -i 's/timestamp/'$time'/' terraform.tfvars
-    
+    terraform init
+    terraform plan
+    terraform apply --auto-approve    
   elif [[ ${array[i]} =  "sonarqube" ]];
   then
     cd ~  
@@ -45,6 +47,9 @@ do
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
     sudo sed -i 's/timestamp/'$time'/' terraform.tfvars
+    terraform init
+    terraform plan
+    terraform apply --auto-approve  
   elif  [[ ${array[i]} = "harbor" ]];
   then
     echo "we got harbor";
@@ -58,6 +63,9 @@ do
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
     sudo sed -i 's/timestamp/'$time'/' terraform.tfvars 
+    terraform init
+    terraform plan
+    terraform apply --auto-approve  
   elif  [[ ${array[i]} = "maven" ]];
   then
     echo "maven is here";
@@ -71,8 +79,9 @@ do
     sudo sed -i 's/tname/'$tool_name'/' terraform.tfvars
     sudo sed -i 's/ttype/'$tool'/' terraform.tfvars
     sudo sed -i 's/timestamp/'$time'/' terraform.tfvars
+    terraform init
+    terraform plan
+    terraform apply --auto-approve  
   fi   
 done
-terraform init
-terraform plan
-terraform apply --auto-approve
+
